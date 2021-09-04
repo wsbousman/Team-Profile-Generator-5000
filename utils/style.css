@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+.header {
+    font-size: 50px;
+    padding: 30px 100px 30px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(170, 0, 0);
+    text-shadow: 1px 1px rgb(1, 26, 170);
+    /* background-image: url("https://i.imgur.com/9ZCJMFA.png") */
+}
+
+.employee {
+    padding: 20px 15px 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 0px 0px 0px;
+    
+}
+
+.titlebox {
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+    justify-content: left;
+    background-color: rgb(0, 29, 190);
+    padding: 10px 10px 10px 10px;
+    box-shadow: 5px 6px 8px;
+    
+}
+

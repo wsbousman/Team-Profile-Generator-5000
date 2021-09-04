@@ -109,8 +109,7 @@ const internPrompt = () => {
 }
 
 const finishPrompt = () => {
-        // generatePage
-    console.log(profileData)
+    // generatePage
     const htmlData = generatePage(profileData)
     fs.writeFile('./index.html', htmlData, err => {
         if (err) throw new Error(err);
