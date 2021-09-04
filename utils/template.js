@@ -1,11 +1,14 @@
 function generateEmployees(teamData) {
+  console.log(teamData[1].engineerName)
   for (let i = 0; i < teamData.length; i++) {
     if (teamData[i].engineerName) {
        return `
         <div class="employee">
           <p>${teamData[i].engineerName}</p>
+          <br>
+          <i class="fas fa-code-branch"></i>
         </div>
-        `
+        `  
     }
     else {
       return `
@@ -54,7 +57,6 @@ function generateContent(teamData) {
 
 module.exports = teamData => {
   const { htmlData } = teamData
-  console.log(teamData)
     return `
     ${generateContent(teamData)}
     `
