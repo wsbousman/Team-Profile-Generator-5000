@@ -26,7 +26,8 @@ const managerPrompt = () => {
       message: 'Enter the office number of your team manager.'
     }
   ]).then((answer) => {
-        profileData.push(answer)
+      answer.status = 'manager'
+      profileData.push(answer)
   })
 }
 
@@ -75,6 +76,7 @@ const engineerPrompt = () => {
               message: 'Enter the GitHub username of your team engineer.'
             }
         ]).then((answer) => {
+            answer.status = 'engineer'
             profileData.push(answer)
       }).then(menuPrompt)
         // return to main menu
@@ -103,6 +105,7 @@ const internPrompt = () => {
               message: 'Enter the school your intern attends.'
             }
         ]).then((answer) => {
+            answer.status = 'intern'
             profileData.push(answer)
       }).then(menuPrompt)
         // return to main menu

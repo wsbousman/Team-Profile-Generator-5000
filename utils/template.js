@@ -1,7 +1,8 @@
 function generateEmployees(teamData) {
-  console.log(teamData[1].engineerName)
-  for (let i = 0; i < teamData.length; i++) {
-    if (teamData[i].engineerName) {
+  console.log(teamData)
+  for (i = 0; i < teamData.length; i++) {
+    if (teamData[i].status === 'engineer') {
+      console.log(teamData[i].engineerName)
        return `
         <div class="employee">
           <p>${teamData[i].engineerName}</p>
@@ -10,12 +11,15 @@ function generateEmployees(teamData) {
         </div>
         `  
     }
-    else {
+    else if (teamData[i].status === 'intern') {
       return `
         <div class="employee">
           <p>${teamData[i].internName}</p>
         </div>
         `
+    }
+    else if (teamData[i].status === 'manager') {
+      return
     }
   }
 }
