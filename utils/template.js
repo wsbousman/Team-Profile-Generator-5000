@@ -1,26 +1,28 @@
-function generateEmployees(teamData) {
-  console.log(teamData)
-  for (i = 0; i < teamData.length; i++) {
-    if (teamData[i].status === 'engineer') {
-      console.log(teamData[i].engineerName)
-       return `
-        <div class="employee">
-          <p>${teamData[i].engineerName}</p>
-          <br>
-          <i class="fas fa-code-branch"></i>
-        </div>
-        `  
-    }
-    else if (teamData[i].status === 'intern') {
-      return `
-        <div class="employee">
-          <p>${teamData[i].internName}</p>
-        </div>
-        `
-    }
-    else if (teamData[i].status === 'manager') {
-      return
-    }
+function engineerMap(element) {
+  if (element.status === 'engineer') {
+    return `
+    <div class="employee">
+    <div class="titlebox">
+      <i class="fas fa-code-branch"></i>
+      <p>${element.engineerName}</p>
+      <p>Engineer</p>
+    </div>
+  </div>
+  `
+  }
+}
+
+function internMap(element) {
+  if (element.status === 'intern') {
+    return `
+    <div class="employee">
+    <div class="titlebox">
+      <i class="fas fa-chess-pawn"></i>
+      <p>${element.internName}</p>
+      <p>Intern</p>
+    </div>
+  </div>
+  `
   }
 }
 
@@ -48,9 +50,10 @@ function generateContent(teamData) {
       <p>Manager</p>
     </div>
   </div>
-
-  ${generateEmployees(teamData)}
-
+  
+  ${teamData.map(engineerMap)}
+  ${teamData.map(internMap)}
+ 
   <footer>
     <h3>&copy; ${new Date().getFullYear()} by ${teamData[0].managerName}</h3>
   </footer>
@@ -64,6 +67,4 @@ module.exports = teamData => {
     return `
     ${generateContent(teamData)}
     `
-    // ${generateEngineer(teamData)}
-    // ${generateIntern(teamData)}
 }
