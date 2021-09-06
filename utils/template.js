@@ -42,7 +42,7 @@ function generateContent(teamData) {
     <title>Team Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./utils/style.css">
-    <link rel="stylesheet" href="./utils/all.min.css">
+    <link rel="stylesheet" href="./utils/css/all.css">
   </head>
   <section>
       <h2 class="header">My Team</h2>
