@@ -6,6 +6,8 @@ function engineerMap(element) {
       <i class="fas fa-code-branch"></i>
       <p>${element.engineerName}</p>
       <p>Engineer</p>
+      <p>ID: ${element.engineerId}</p>
+      <p>GitHub: <a href="https://github.com/${element.engineerGithub}">${element.engineerGithub}</a></p>
     </div>
   </div>
   `
@@ -20,6 +22,9 @@ function internMap(element) {
       <i class="fas fa-chess-pawn"></i>
       <p>${element.internName}</p>
       <p>Intern</p>
+      <p>ID: ${element.internId}</p>
+      <p>Email: ${element.internEmail}</p>
+      <p>School: ${element.internSchool}</p>
     </div>
   </div>
   `
@@ -43,19 +48,23 @@ function generateContent(teamData) {
       <h2 class="header">My Team</h2>
   </section>
 
+  <div class="wrapper">
   <div class="employee">
     <div class="titlebox">
       <i class="far fa-angry"></i>
       <p>${teamData[0].managerName}</p>
       <p>Manager</p>
+      <p>ID: ${teamData[0].managerId}</p>
+      <p>Email: ${teamData[0].managerEmail}</p>
+      <p>Office number:${teamData[0].managerOffice}</p>
     </div>
   </div>
-  
   ${teamData.map(engineerMap)}
   ${teamData.map(internMap)}
+  </div>
  
   <footer>
-    <h3>&copy; ${new Date().getFullYear()} by ${teamData[0].managerName}</h3>
+    <h3 class="footer">&copy; ${new Date().getFullYear()} by ${teamData[0].managerName}</h3>
   </footer>
   </body>
 </html>
@@ -63,7 +72,6 @@ function generateContent(teamData) {
 }
 
 module.exports = teamData => {
-  const { htmlData } = teamData
     return `
     ${generateContent(teamData)}
     `

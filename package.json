@@ -1,0 +1,25 @@
+{
+  "name": "team-profile-generator-5000",
+  "version": "1.0.0",
+  "description": "A team profile generator application written using Node. The inquirer prompts were a bit more complicated this time around,   requiring menu/sub-menu navigation and collecting data from all user-selected menus, but I eventually figured it out.   Working on simple HTML styling and testing next.",
+  "main": "index.js",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  },
+  "devDependencies": {
+    "jest": "^27.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsbousman/Team-Profile-Generator-5000.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wsbousman/Team-Profile-Generator-5000/issues"
+  },
+  "homepage": "https://github.com/wsbousman/Team-Profile-Generator-5000#readme"
+}
